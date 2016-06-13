@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <title>Reflec Map</title>
+    
+    <!-- css -->
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" media="screen" />
+    <link rel="stylesheet" href="css/styles.css" />
+    
+    <!-- scripts -->
+	<script src="/js/jquery/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="//maps.google.com/maps/api/js?sensor=false"></script>
+	<script type="text/javascript" src="/js/gmaps/gmaps.min.js"></script>
+	<script src="/js/map.js"></script>
+</head>
+<body>
+	<div class="container">
+	    <div class="row">
+			<!-- Side Bar  -->
+			<div class="col-sm-3 col-xs-2 sidebar">
+				<div class="project_img"><a href="">Reflec Map Icon</a></div>
+				<ul class="nav nav-sidebar menu-list">
+					<li class="active"><a href="#">Menu 1<span class="sr-only">(current)</span></a></li>
+					<li><a href="#">Menu 2</a></li>
+					<li><a href="#">Menu 3</a></li>
+					<li><a href="#">Menu 4</a></li>
+					<li><a href="#">Config</a></li>
+				</ul>
+			</div>
+			<div class="col-xs-10 main">
+				<div class="row status">
+					<!-- Map Info -->
+					<div class="col-xs-5 map-info">
+						<span>Map Name</span><br/><br/>
+						<span>☆：99 ♡：55</span>
+					</div>
+					<!-- User Info -->
+					<div class="col-xs-4 user-info">
+						<span>User Name</span><br/><br/>
+						<span>Follower: 32</span>
+					</div>
+					<!-- User Icon -->
+					<div class="col-xs-3 user-icon">
+						User Icon
+					</div>
+				</div>
+				<div class="row">
+					<!-- Map  -->
+					<div class="col-xs-9 map">
+						<div id="mymap"></div>
+					</div>
+					<div class="col-xs-3 marker-sidebar">
+						<!-- Search -->
+						<div class="search">
+							<input type="text" name="marker-search" class="input-sm" placeholder="search to marker..." />
+						</div>
+						<!-- Sort -->
+						<div class="btn-group sort">
+							<button type="button" class="btn btn-default">Sort</button>
+							<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+								<span class="caret"></span>
+								<span class="sr-only">Toggle Dropdown</span>
+							</button>
+							<ul class="dropdown-menu" role="menu">
+							<li><a href="#">Item 1</a></li>
+							<li><a href="#">Item 2</a></li>
+							<li><a href="#">Item 3</a></li>
+							<li><a href="#">Item 4</a></li>
+							</ul>
+						</div>
+						<!-- Marker List -->
+						<ul class="nav nav-sidebar marker-list">
+							<li class="active"><a href="#">Marker 1<span class="sr-only">(current)</span></a></li>
+							<li><a href="#">Marker 2</a></li>
+							<li><a href="#">Marker 3</a></li>
+							<li><a href="#">Marker 4</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<script src="/js/bootstrap/bootstrap.min.js"></script>
+</body>
+</html>

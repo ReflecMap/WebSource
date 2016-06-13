@@ -1,0 +1,95 @@
+/*
+ * Global add-ons
+ */
+
+/*
+ * Sidebar
+ */
+.sidebar {
+	position: fixed;
+	width: 200px;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1000;
+	display: block;
+	padding: 20px;
+	overflow-x: hidden;
+	overflow-y: auto;
+	background-color: #f5f5f5;
+	border-right: 1px solid #eee;
+}
+.project_img {
+	margin-bottom: 20px;
+}
+.menu-list {
+	margin-right: -21px; /* 20px padding + 1px border */
+	margin-bottom: 20px;
+	margin-left: -20px;
+}
+.menu-list > li > a {
+	padding-right: 20px;
+	padding-left: 20px;
+}
+.menu-list > .active > a,
+.menu-list > .active > a:hover,
+.menu-list > .active > a:focus {
+	color: #fff;
+	background-color: #428bca;
+}
+
+/*
+ * Main content
+ */
+/* Status (Map Info and User INfo) */
+.status {
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 217px;
+}
+.map-info, .user-info, .user-icon {
+	height: 100px;
+	border: 1px solid black;
+}
+/* Map */
+.map {
+	position: fixed;
+	top: 100px;
+	right: 0;
+	left: 201px;
+	bottom: 0;
+	border: 1px solid black;
+	padding: 0;
+}
+#mymap {
+	width: 100%;
+	height: 100%;
+}
+/* Marker Sidebar */
+.marker-sidebar {
+	position: fixed;
+	width: 180px;
+	top: 100px;
+	bottom: 0;
+	right: 0;
+	z-index: 1000;
+	display: block;
+	padding: 10px;
+	background-color: #f5f5f5;
+	border-left: 1px solid #eee;
+}
+.sort {
+	margin-top: 10px;
+}
+.marker-list {
+	margin-top: 10px;
+	margin-left: -10px;
+	margin-right: -11px;
+}
+.marker-list > .active > a,
+.marker-list > .active > a:hover,
+.marker-list > .active > a:focus {
+	color: #fff;
+	background-color: #428bca;
+}
