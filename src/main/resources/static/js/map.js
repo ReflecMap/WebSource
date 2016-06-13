@@ -5,20 +5,30 @@
     var lng = 139.8042225;
     var zoom = 15;
 	var mymap;
-	
+
 	$(document).ready(function(){
 		mymap = new GMaps({ 
 			div: "#mymap", lat: lat, lng: lng, zoom: zoom, 
+			// position.latLang.lat(), position.latLng.lng()
 			click: function(position) {
-				mymap.addMarker({
-			        lat: position.latLng.lat(),
-			        lng: position.latLng.lng(),
-			        title: "追加マーカー",
-			        infoWindow: {
-			            content: 
-			            	"マーカー追加でっせ"
-			        }
-			    });
+				
+//				if(confirm('Add Marker ?')) {
+//					$(this).blur();
+//					if($("#modal-overlay")[0]) return false;
+//					
+//					// open event
+//					$("body").append('<div id="modal-overlay"></div>');
+//					$("#modal-overlay").fadeIn("slow");
+//					centeringModalSyncer();
+//					$("#modal-content").fadeIn("slow");
+//
+//					// close event
+//					$("#modal-overlay, #modal-close").unbind().click(function() {
+//						$("#modal-content, #modal-overlay").fadeOut("slow", function(){
+//							$('#modal-overlay').remove();
+//						});
+//					});
+//				}
 			},
 		});
 
@@ -60,7 +70,6 @@
 //				alert("Done!");
 //			}
 //		});
-		
 		
 	});
 	
