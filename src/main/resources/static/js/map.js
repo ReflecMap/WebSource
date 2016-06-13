@@ -8,7 +8,7 @@
 
 	$(document).ready(function(){
 		mymap = new GMaps({ 
-			div: "#mymap", lat: lat, lng: lng, zoom: zoom, 
+			div: "#map", lat: lat, lng: lng, zoom: zoom, 
 			// position.latLang.lat(), position.latLng.lng()
 			click: function(position) {
 				
