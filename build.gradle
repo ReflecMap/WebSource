@@ -2,6 +2,7 @@ buildscript {
 	ext {
 		springBootVersion = '1.3.5.RELEASE'
 		kotlinVersion = '1.0.2'
+		flywayVersion = '4.0'
 	}
 	repositories {
 		mavenCentral()
@@ -32,7 +33,8 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-thymeleaf')
 	compile('org.springframework.boot:spring-boot-starter-web')
 	compile("org.jetbrains.kotlin:kotlin-stdlib:${kotlinVersion}")
-	runtime('mysql:mysql-connector-java')
+	compile('mysql:mysql-connector-java')
+	compile("org.flywaydb:flyway-core:${flywayVersion}")
 	testCompile('org.springframework.boot:spring-boot-starter-test') 
 }
 
