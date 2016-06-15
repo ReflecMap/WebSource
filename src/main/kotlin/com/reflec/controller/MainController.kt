@@ -7,8 +7,10 @@ import org.springframework.web.bind.annotation.RequestMethod
 import org.springframework.web.servlet.ModelAndView
 
 @Controller
-@RequestMapping("/mypage")
 class MainController {
-    @RequestMapping(method = arrayOf(RequestMethod.GET))
-    fun mypage(): String = "mypage"
+    @RequestMapping("/mypage")
+    fun myPage(): String = "mypage"
+
+    @RequestMapping("/input-modal")
+    fun inputModal(): String = "input-modal"
 }
