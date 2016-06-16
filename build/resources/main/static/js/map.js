@@ -6,7 +6,7 @@
     var zoom = 15;
 	var mymap;
 
-	$('#inputModal').load('/input-modal');
+	// $('#inputModal').load('/input-modal');
 
 	$(document).ready(function(){
 
