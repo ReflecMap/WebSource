@@ -1,7 +1,6 @@
 (function($){
-    'use struct'
 
-    $(document).on('ready', function(){
+    $(document).on('ready', function() {
         $('.kv-ltr-theme-fa-star').rating({
             hoverOnClear: false,
             theme: 'krajee-fa',

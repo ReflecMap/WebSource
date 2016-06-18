@@ -3,6 +3,14 @@ spring:
     throw-exception-if-no-handler-found: true
   thymeleaf:
     mode: HTML5
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+  profiles:
+    active: dev # 各個人の設定はapplication-dev.ymlを作成し、記載してください
 logging:
   file: ./log/ReflecMap.log
   level:

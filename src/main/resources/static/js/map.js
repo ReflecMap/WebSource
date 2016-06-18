@@ -9,16 +9,13 @@ var MyMap = function() {
 		zoom: this.zoom
 	});
 	this.markers = [];
-}
-MyMap.prototype.addMyMarker = function(markerData){
+};
+MyMap.prototype.addMyMarker = function(markerData) {
 	var marker = {
-		map: this.mymap,
 		lat: markerData.lat,
 		lng: markerData.lng,
-		click: function(e) {
-			alert('click marker');
-		}
+		title: "test"
 	};
 	this.mymap.addMarker(marker);
 	this.markers.push(marker);
-}
+};
