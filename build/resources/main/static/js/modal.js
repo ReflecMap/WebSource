@@ -1,4 +1,0 @@
-(function($){
-    'use struct'
-
-})(jQuery);
