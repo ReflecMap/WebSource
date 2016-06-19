@@ -1,6 +1,12 @@
-var Modal = function() {
-    var hoge = null;
-};
-Modal.prototype.initModalForm = function() {
-    console.log(this.hoge);
-};
+class InputMarkerModal {
+    constructor() {
+
+    }
+
+    initModalValues() {
+        $('#marker-modal-form [name=title]').val("");
+        $('#marker-modal-form [name=rate]').val("2");
+        $('#marker-modal-form [name=subscribe]').val("");
+        $('#marker-modal-form [name=private]').prop("checked", false);
+    }
+}
