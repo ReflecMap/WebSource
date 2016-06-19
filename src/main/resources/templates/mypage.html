@@ -123,18 +123,18 @@
 	
 	
 	<!-- Modal -->
-	<div class="modal fade" id="inputModal">
+	<div class="modal fade" id="marker-modal">
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
 					<h4 class="modal-title">Mark</h4><hr />
 				</div>
 				<div class="modal-body container-fluid">
-					<form id="modal-form">
+					<form id="marker-modal-form">
 						<div class="row-fluid">
 							<div class="col-sm-2">Title</div>
 							<div class="col-sm-10 form-inline" style="padding: 3px;">
-								<input name="title" type="text" class="form-control input-sm" placeholder="title" size="20" />
+								<input name="title" type="text" class="form-control input-sm" placeholder="title" value="" size="20" />
 							</div>
 						</div>
 						<div class="row-fluid">
@@ -146,13 +146,13 @@
 						<div class="row-fluid">
 							<div class="col-sm-2">Subscribe</div>
 							<div class="col-sm-10" style="padding: 3px;">
-								<textarea name="subscribe" class="form-control  input-sm" rows="4" placeholder="subscribe"></textarea>
+								<textarea name="subscribe" class="form-control  input-sm" value="" rows="4" placeholder="subscribe"></textarea>
 							</div>
 						</div>
 						<div class="row-fluid">
 							<div class="col-sm-6 col-sm-offset-2">
 								<label class="checkbox-inline">
-									<input name="private" type="checkbox" /> Private
+									<input name="private" type="checkbox" value="Private" /> Private
 								</label>
 							</div>
 						</div>
@@ -239,15 +239,15 @@
 	<script type="text/javascript" src="/js/jquery/jquery-1.12.4.min.js"></script>
 	<script type="text/javascript" src="/js/bootstrap/bootstrap.min.js"></script>
 	<script type="text/javascript" src="/js/gmaps/gmaps.min.js"></script>
+	<script type="text/javascript" src="/js/map.js"></script>
+	<script type="text/javascript" src="/js/marker-data.js"></script>
+	<script type="text/javascript" src="/js/modal.js"></script>
+	<script type="text/javascript" src="/js/main.js"></script>
 	<script type="text/javascript" src="/js/star-rating/star-rating.min.js"></script>
 	<script type="text/javascript" src="/js/star-rating/star-rating_locale_es.js"></script>
 	<script type="text/javascript" src="/js/select2/select2.full.js"></script>
 	<script type="text/javascript" src="/js/marker-search.js"></script>
-	<script type="text/javascript" src="/js/map.js"></script>
-	<script type="text/javascript" src="/js/marker-data.js"></script>
 	<script type="text/javascript" src="/js/menu.js"></script>
-	<script type="text/javascript" src="/js/modal.js"></script>
 	<script type="text/javascript" src="/js/favorite.js"></script>
-	<script type="text/javascript" src="/js/main.js"></script>
 </body>
 </html>

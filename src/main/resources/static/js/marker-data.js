@@ -1,21 +1,26 @@
-var MarkerData = function() {
-    this.obj = {};
-};
-MarkerData.prototype.pushMarkerPosition = function(position) {
-    if(position.lat !== undefined) {
-        this.obj.lat = position.lat;
+//
+// Marker Data(lat, lng, title, rate, subscribe, private)
+//
+class MarkerData {
+    constructor() {
+        this.obj = {};
     }
-    if(position.lng !== undefined) {
-        this.obj.lng = position.lng;
+
+    saveMarkerPosition(position) {
+        this.obj.lat = (position.lat !== undefined) ? position.lat : 0;
+        this.obj.lng = (position.lng !== undefined) ? position.lng : 0;
     }
-};
-MarkerData.prototype.pushInputData = function(formData) {
-    this.obj.title = formData[0].value;
-    this.obj.rate = formData[1].value;
-    this.obj.subscribe = formData[2].value;
-    this.obj.private = formData[3].value;
-};
-MarkerData.prototype.getJSONData = function() {
-    return JSON.stringify(this.obj);
-};
+
+    saveMarkerInfomation(markerInfo) {
+        this.obj.title = markerInfo.title;
+        this.obj.rate = markerInfo.rate;
+        this.obj.subscribe = markerInfo.subscribe;
+        this.obj.privateCheck = markerInfo.privateCheck;
+    }
+
+    // MarkerDat to JSONData([])
+    getJSONData() {
+        return JSON.stringify(this.obj);
+    }
+}
 

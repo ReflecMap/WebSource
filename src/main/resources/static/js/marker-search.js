@@ -1,5 +1,5 @@
-(function() {
-    'use struct'
+(function($) {
+    'use struct';
 
     var $states = $(".js-source-states");
     var statesOptions = $states.html();
@@ -8,5 +8,5 @@
 
     var	$dataList = $('.marker-list');
     $dataList.select2();
-})();
+})(jQuery);
 

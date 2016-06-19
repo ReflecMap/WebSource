@@ -1,21 +1,32 @@
-var MyMap = function() {
-	this.lat = 35.710540;
-	this.lng = 139.8042225;
-	this.zoom = 15;
-	this.mymap = new GMaps({
-		div: "#map",
-		lat: this.lat,
-		lng: this.lng,
-		zoom: this.zoom
-	});
-	this.markers = [];
-};
-MyMap.prototype.addMyMarker = function(markerData) {
-	var marker = {
-		lat: markerData.lat,
-		lng: markerData.lng,
-		title: "test"
-	};
-	this.mymap.addMarker(marker);
-	this.markers.push(marker);
-};
+//
+// Create Map and Marker
+//
+class MyMap {
+	constructor() {
+		this.mymap = new GMaps({ div: "#map", lat: 0, lng: 0, zoom: 17 });
+		this.markers = [];
+	}
+
+	//
+	// public method
+	//
+	addMyMarker(markerInfo) {
+		let contents = this._createMarkerInfoContents(markerInfo);
+		let marker = {
+			lat: markerInfo.lat,
+			lng: markerInfo.lng,
+			title: markerInfo.title,
+			infoWindow: { content: contents }
+		};
+		this.mymap.addMarker(marker);
+		this.markers.push(marker);
+	}
+
+	//
+	// private method
+	//
+	// markerInfo { title, rate, subscribe, private }
+	_createMarkerInfoContents(markerInfo) {
+		return `<p>title: ${markerInfo.title}</p><p>rate: ${markerInfo.rate}</p><p>subscribe: ${markerInfo.subscribe}</p>`;
+	}
+}
