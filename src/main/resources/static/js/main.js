@@ -94,7 +94,6 @@
 
         if(update) {
             map.updateMyMarker(markerData);
-            update = false;
             $('#marker-modal').modal('hide');
             return;
         }
@@ -102,18 +101,24 @@
         map.addMyMarker(markerData.obj);
 
         $('#marker-modal').modal('hide');
-
-        // To initialize the value entered in the modal
-        modal.initModalValues();
     });
     // Event of click the cancel-btn of the marker modal
     $('#modal-cancel-btn').on('click', () => {
-        console.log('click cancel-btn!!');
+        console.log('click cancel-btn...');
 
         if(update) { update = false; }
 
         $('#marker-modal').modal('hide');
+    });
+    // Event of hide the modal
+    $('#marker-modal').on('hidden.bs.modal', () => {
+        console.log('hide modal...');
+
+        if(update) { update = false; }
+
+        // To initialize the value entered in the modal
         modal.initModalValues();
     });
+
 })(jQuery);
 
