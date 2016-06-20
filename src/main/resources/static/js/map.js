@@ -4,29 +4,53 @@
 class MyMap {
 	constructor() {
 		this.mymap = new GMaps({ div: "#map", lat: 0, lng: 0, zoom: 17 });
-		this.markers = [];
 	}
 
 	//
 	// public method
 	//
+	// new marker add
 	addMyMarker(markerInfo) {
-		let contents = this._createMarkerInfoContents(markerInfo);
 		let marker = {
 			lat: markerInfo.lat,
 			lng: markerInfo.lng,
 			title: markerInfo.title,
-			infoWindow: { content: contents }
+			details: {
+				id: markerInfo.id,
+				title: markerInfo.title,
+				rate: markerInfo.rate,
+				subscribe: markerInfo.subscribe,
+				privateCheck: markerInfo.privateCheck
+			}
 		};
+
 		this.mymap.addMarker(marker);
-		this.markers.push(marker);
+	}
+
+	// marker info update
+	updateMyMarker(markerInfo) {
+		let marker = this._identifyMarker(markerInfo.id);
+
+		// Title when the mouse over
+		marker.title = markerInfo.title;
+
+		// Details when the modal
+		marker.details.id = markerInfo.id;
+		marker.details.title = markerInfo.title;
+		marker.details.rate = markerInfo.rate;
+		marker.details.subscribe = markerInfo.subscribe;
+		marker.details.privateCheck = markerInfo.privateCheck;
 	}
 
 	//
 	// private method
 	//
-	// markerInfo { title, rate, subscribe, private }
-	_createMarkerInfoContents(markerInfo) {
-		return `<p>title: ${markerInfo.title}</p><p>rate: ${markerInfo.rate}</p><p>subscribe: ${markerInfo.subscribe}</p>`;
+	// To identify the marker in the ID
+	_identifyMarker(markerId) {
+		this.mymap.markers.forEach(marker => {
+			if(markerID === marker.details.id) {
+				return marker;
+			}
+		});
 	}
 }
