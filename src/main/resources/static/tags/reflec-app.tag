@@ -1,4 +1,4 @@
-<my-app>
+<reflec-app>
 
     <style scoped>
         #my-map {
@@ -12,22 +12,13 @@
         }
     </style>
 
-    <my-header></my-header>
+    <reflec-header></reflec-header>
 
     <div id='my-map'></div>
 
-    <my-sidebar></my-sidebar>
-
-    <my-modal></my-modal>
-
-    const markerData = {
-        title: 'タイトル',
-        rate: 3,
-        subscribe: 'アイウエオ',
-        privateCheck: 'true'
-    }
-
-    riot.mount('my-modal', { markerData })
+    <menu-sidebar></menu-sidebar>
+    <info-sidebar></info-sidebar>
+    <mark-modal></mark-modal>
 
     this.on('mount', () => {
 
@@ -50,12 +41,12 @@
         //
         // Events
         //
-        const $modal = $('.ui.modal')
+        const $markModal = $('.mark.small.modal')
 
         // Event of GMaps Map Clicked
         GMaps.on('click', map, position => {
             console.log('click map!!')
-            $modal.modal('show')
+            $markModal.modal('show')
         })
 
         // Event of GMaps marker added
@@ -69,4 +60,4 @@
         })
     })
 
-</my-app>
+</reflec-app>

@@ -1,6 +1,6 @@
-<my-modal>
+<mark-modal>
 
-    <div class='ui modal'>
+    <div class='ui mark small modal'>
         <div class='header'>
             Mark
         </div>
@@ -26,11 +26,11 @@
                 </div>
             </form>
         </div>
-        <div class="actions">
+        <div class='actions'>
             <div onclick={ cancel } class="ui black deny button">
                 Cancel
             </div>
-            <div onclick={ addMarker } class="ui positive right labeled icon button">
+            <div onclick={ addMarker } class="ui positive deny button">
                 Mark
             </div>
         </div>
@@ -41,11 +41,11 @@
     })
 
     cancel(e) {
-        console.log(opts.markerData)
+        console.log('click cancel')
     }
 
     addMarker(e) {
         console.log('click mark')
     }
 
-</my-modal>
+</mark-modal>
